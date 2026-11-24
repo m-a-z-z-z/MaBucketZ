@@ -1,0 +1,32 @@
+{
+    "version": "447",
+    "description": "Feature rich scrobbler for Windows, Linux & Android. Supports Last.fm, ListenBrainz, Libre.fm & Pleroma. With regex edits, charts & Discord Rich Presence on PC.",
+    "homepage": "https://kawaiidango.github.io/pano-scrobbler/",
+    "license": "GPL-3.0-or-later",
+    "notes": "Configuration is stored in $env:APPDATA\\pano-scrobbler.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kawaiiDango/pano-scrobbler/releases/download/447/pano-scrobbler-windows-x64.exe#/setup.exe",
+            "hash": "d7b2a7d96bb033f1218d06e9c953c146b369f5a593be1928188084a2047360e1"
+        }
+    },
+    "innosetup": true,
+    "bin": "pano-scrobbler.exe",
+    "shortcuts": [
+        [
+            "pano-scrobbler.exe",
+            "Pano Scrobbler"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/kawaiiDango/pano-scrobbler/releases/latest",
+        "regex": "releases/tag/(?:v)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kawaiiDango/pano-scrobbler/releases/download/$version/pano-scrobbler-windows-x64.exe#/setup.exe"
+            }
+        }
+    }
+}

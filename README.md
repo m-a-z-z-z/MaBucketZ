@@ -1,38 +1,32 @@
-# Scoop Bucket Template
+# MaBucketZ
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+[![Tests](https://github.com/m-a-z-z-z/MaBucketZ/actions/workflows/ci.yml/badge.svg)](https://github.com/m-a-z-z-z/MaBucketZ/actions/workflows/ci.yml) [![Excavator](https://github.com/m-a-z-z-z/MaBucketZ/actions/workflows/excavator.yml/badge.svg)](https://github.com/m-a-z-z-z/MaBucketZ/actions/workflows/excavator.yml)
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+Personal [Scoop](https://scoop.sh) bucket for packages I did not find in the official Scoop buckets.
 
-## How do I use this template?
+## Packages
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Workflow permissions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Ensure `Read repository contents and packages permissions` is selected.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
+| Manifest | Description |
+|----------|-------------|
+| [deja-vu](bucket/deja-vu.json) | Claude Code, Codex & Cursor memory — local MCP memory, session history search & coding agent handoff (from my [deja-vu](https://github.com/m-a-z-z-z/deja-vu) fork) |
+| [pano-scrobbler](bucket/pano-scrobbler.json) | Feature rich scrobbler for Windows, Linux & Android. Supports Last.fm, ListenBrainz, Libre.fm & Pleroma |
 
 ## How do I install these manifests?
 
 After manifests have been committed and pushed, run the following:
 
 ```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+scoop bucket add mabucketz https://github.com/m-a-z-z-z/MaBucketZ
+scoop install mabucketz/<manifestname>
 ```
+
+<details>
+<summary>If you get an error you might have to add this bucket first</summary>
+
+```pwsh
+scoop bucket add mabucketz
+```
+</details>
 
 ## How do I contribute new manifests?
 
