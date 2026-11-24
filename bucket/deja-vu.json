@@ -1,0 +1,35 @@
+{
+    "version": "0.25.1",
+    "description": "Claude Code, Codex & Cursor memory - local MCP memory, session history search & coding agent handoff. Fork of vshulcz/deja-vu.",
+    "homepage": "https://github.com/m-a-z-z-z/deja-vu",
+    "license": "MIT",
+    "notes": "Run 'deja install --auto' once to wire recall and hooks into detected coding agents.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/m-a-z-z-z/deja-vu/releases/download/v0.25.1/deja-vu_0.25.1_windows_amd64.zip",
+            "hash": "c939ec4d26886cf19cacc202c01cc5fedbe7ffe2d252b1631ddb07947f9f2efa"
+        },
+        "arm64": {
+            "url": "https://github.com/m-a-z-z-z/deja-vu/releases/download/v0.25.1/deja-vu_0.25.1_windows_arm64.zip",
+            "hash": "18bca9a7ca615e0afc3a6031282715bdf22b495a031ea967258af63a951068eb"
+        }
+    },
+    "bin": "deja.exe",
+    "checkver": {
+        "url": "https://github.com/m-a-z-z-z/deja-vu/releases/latest",
+        "regex": "releases/tag/(?:v)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/m-a-z-z-z/deja-vu/releases/download/v0.25.1/deja-vu_0.25.1_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/m-a-z-z-z/deja-vu/releases/download/v0.25.1/deja-vu_0.25.1_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/m-a-z-z-z/deja-vu/releases/download/v$version/checksums.txt"
+        }
+    }
+}
